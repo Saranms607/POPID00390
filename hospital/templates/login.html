@@ -1,0 +1,47 @@
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<main>
+
+    <!-- login form -->
+    <section class="login-form-section">
+        <div class="container">
+            <div class="row border border-1 border-primary my-5 ">
+                <div class="col-md-6 bg-primary px-4 py-5">
+                    <!-- Content for the first column -->
+                    <h1 class="text-light">Login</h1>
+                    <p class="text-light mt-3">Get access to your Cart, Orders, Recommendations and more..</p>
+                </div>
+                <div class="col-md-6 px-4 py-5">
+                    <!-- Content for the second column -->
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="InputEmail1" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="InputEmail1" name="username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="InputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="InputPassword1" name="password">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary d-block w-100">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
+</body>
+</html>

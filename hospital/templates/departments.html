@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+    <link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/about.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/about_responsive.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid" style="background-color: rgb(204, 209, 237);" >
+      <a class="navbar-brand" href="#"><h1>TRAVANCORE MEDICITY</h1></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/doctors">DOCTORS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/departments">DEPARTMENTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">CONTACT US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/medicine">MEDICINE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">LOGIN</a>
+          </li>
+        </ul>
+        <a class="btn btn primary" href="/register" role="button">Register Now</a>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+    <div style="background-color: rgb(61, 61, 248); width: 100; height: 87px;">
+        <center>
+            <h1 style="padding-top: 20px;">OUR DEPARTMENT PAGE</h1>
+        </center>
+    </div>
+    <div style="background-color: darkgrey;   height: 970px;padding-top: 20px; " >
+        <div class="card" style=" background-color:rgb(59, 234, 59); margin-left: 250px; margin-right: 250px; padding-top: 10px;">
+            <div class="card-header">
+                <center><h1>DERMATOLOGY</h1></center>
+            </div>
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p>The dermatology department is equipped with advanced facilities for the diagonosis and treatment of different disorders affecting babies, children and adults.</p>
+              </blockquote>
+            </div>
+          </div>
+          <div class="card" style=" background-color:rgb(59, 234, 59); margin-left: 250px; margin-right: 250px; padding-top: 10px; margin-top: 20px;">
+            <div class="card-header">
+                <center><h1>CARDIOLAGY</h1></center>
+            </div>
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p>Our ultramodern 24×7 Cardiac unit, handled by renowned Cardiologists, Cardiothoracic surgeons, Electrophysiologists and Anesthetists, offer heart care services across the spectrum of adult heart care like Coronary, Structural and Peripheral vascular diseases, electrophysiology and device therapies</p>
+              </blockquote>
+            </div>
+          </div>
+          <div class="card" style=" background-color:rgb(59, 234, 59); margin-left: 250px; margin-right: 250px; padding-top: 10px; margin-top: 20px;">
+            <div class="card-header">
+                <center><h1>PAEDIATRICS</h1></center>
+            </div>
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p>Our Paediatric services ensure that the medical needs of your family are met from childbirth onwards, as your child grows and develops as a charming individual.</p>
+              </blockquote>
+            </div>
+          </div>
+          <div class="card" style=" background-color:rgb(59, 234, 59); margin-left: 250px; margin-right: 250px; padding-top: 10px; margin-top: 20px;">
+            <div class="card-header">
+                <center><h1>PSYCHOLOGY</h1></center>
+            </div>
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p>Find Psychology services and therapies that ensure the general well-being of you and your family. Expert psychologist deftly identifies your disorders and plans out effective treatment programs</p>
+              </blockquote>
+            </div>
+          </div>
+         
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'styles/bootstrap4/popper.js' %}"></script>
+    <script src="{% static 'styles/bootstrap4/bootstrap.min.js' %}"></script>
+    <script src="{% static 'plugins/greensock/TweenMax.min.js' %}"></script>
+    <script src="{% static 'plugins/greensock/TimelineMax.min.js' %}"></script>
+    <script src="{% static 'plugins/scrollmagic/ScrollMagic.min.js' %}"></script>
+    <script src="{% static 'plugins/greensock/animation.gsap.min.js' %}"></script>
+    <script src="{% static 'plugins/greensock/ScrollToPlugin.min.js' %}"></script>
+    <script src="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+    <script src="{% static 'plugins/easing/easing.js' %}"></script>
+    <script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
+    <script src="{% static 'js/about.js' %}"></script>
+</body>
+</html>

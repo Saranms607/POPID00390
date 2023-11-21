@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+    <link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/about.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/about_responsive.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+   
+    <title>Document</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid" style="background-color: rgb(204, 209, 237);" >
+      <a class="navbar-brand" href="#"><h1>TRAVANCORE MEDICITY</h1></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/doctors">DOCTORS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/departments">DEPARTMENTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">CONTACT US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/medicine">MEDICINE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">LOGIN</a>
+          </li>
+          <a class="btn btn primary" href="/register" role="button">Register Now</a>
+        </ul>
+      </div>
+    </div>
+</nav>
+<div class="row">
+  {% for medicine in result %}
+      <div class="col-md-4">
+          <div class="card mb-2 text-center text-white" style="width: 300; height: 250; background-color: rgb(21, 94, 88);">
+              <img class="card-img-top" src="{{medicine.img.url}}" style="width: 290; height: 150;">
+              <div class="card-body">
+                  <h5 class="card-title">{{ medicine.name }}</h5>
+                  <p class="card-text">{{ medicine.price }}</p>
+              </div>
+          </div>
+      </div>
+  {% endfor %}
+</div>
+
+
+<br>
+
+<footer class="bg-light text-center text-white">
+    <div class="text-center p-3" style="background-color: rgba(3, 58, 53, 0.89);">
+       © 2023 Mims Hospital.
+       <a class="text-white" href="https://mdbootstrap.com/">Tvm.com</a>
+    </div>
+</footer>
+
+
+
+
+<!-- 
+    <div style="background-color: burlywood; height: 155px;"> 
+        <center><h1 style="margin-top: 20px; padding-top: 12px; font-size: 50x;">MEDICINE LIST</h1></center>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4" style="height: 800px; background-color: brown; width: 1228px;">
+        <div class="col" style="height: 50px;">
+          <div class="card" style="height: 315px; width: 275px; margin-left: 105px; margin-top: 30px;">
+            <img src="{% static 'image/medi1.jpg'%}" class="card-img-top" alt="..." style="height:240px ;">
+            <div class="card-body" style="margin-top: -48px;">
+              <h5 class="card-title">SHELCAL-500 TABLET 15'S</h5>
+              <p class="card-text">Price: Rs. 131.00 <br> Quantity: 100 Nos</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="height: 315px; width: 275px; margin-left: -110px; margin-top: 30px;">
+            <img src="{% static 'image/medi2.jpg' %}" class="card-img-top" alt="..." style="height: 230px;">
+            <div class="card-body" style="margin-top: -20px;">
+              <h5 class="card-title">BECOSULES CAPSULES</h5>
+              <p class="card-text">Price: Rs. 55.00 <br>Quantity: 150 Nos</p>
+        </div>
+        <div class="col">
+            <div class="card" style="height: 315px; width: 275px; margin-left: 370px; margin-top:-318px;">
+              <img src="{% static 'image/medi3.jpeg' %}" class="card-img-top" alt="..." style="height: 230px;">
+              <div class="card-body" style="margin-top: -20px;">
+                <h5 class="card-title"> CAPFULLNERVESULE 10'S</h5>
+                <p class="card-text">Price: Rs. 298.00 <br>Quantity: 150 Nos</p>
+          </div>
+
+          <div class="col" style="height: 50px;">
+            <div class="card" style="height: 315px; width: 275px; margin-left: -770px; margin-top: 50px;">
+              <img src="{% static 'image/medi4.jpg'%}" class="card-img-top" alt="..." style="height: 230px;">
+              <div class="card-body" style="margin-top: -20px;">
+                <h5 class="card-title">ROSUKEM 5 TABLET 15'S</h5>
+                <p class="card-text">Price: Rs. 100 <br>Quantity: 150 Nos</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="height: 315px; width: 275px; margin-left: -370px;">
+              <img src="{% static 'image/medi5.jpg' %}" class="card-img-top" alt="...">
+              <div class="card-body" style="margin-top: -65px;">
+                <h5 class="card-title">LIVIXIGA 5M TABLET 10'S</h5>
+                <p class="card-text">Price: Rs. 120 <br>Quantity: 150 Nos</p></p>
+          </div>
+          <div class="col">
+              <div class="card" style="height: 315px; width: 275px; margin-left: 370px; margin-top: -337px; ">
+                <img src="{% static 'image/medi6.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body" style="margin-top: -20px;">
+                  <h5 class="card-title">Paracetamol  10x10</h5>
+                  <p class="card-text">Prive: Rs 70 <br> Quantity: 75 Nos</p>
+            </div>
+    </div>   -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'styles/bootstrap4/popper.js' %}"></script>
+    <script src="{% static 'styles/bootstrap4/bootstrap.min.js' %}"></script>
+    <script src="{% static 'plugins/greensock/TweenMax.min.js' %}"></script>
+    <script src="{% static 'plugins/greensock/TimelineMax.min.js' %}"></script>
+    <script src="{% static 'plugins/scrollmagic/ScrollMagic.min.js' %}"></script>
+    <script src="{% static 'plugins/greensock/animation.gsap.min.js' %}"></script>
+    <script src="{% static 'plugins/greensock/ScrollToPlugin.min.js' %}"></script>
+    <script src="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+    <script src="{% static 'plugins/easing/easing.js' %}"></script>
+    <script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
+    <script src="{% static 'js/about.js' %}"></script>
+    
+</body>
+</html>
